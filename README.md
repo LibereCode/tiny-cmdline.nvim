@@ -209,3 +209,5 @@ require("tiny-cmdline").setup({
 - **Completion menu misaligned**: Tune `menu_col_offset` to match your border/padding.
 - **Border doesn't match the rest of Neovim**: Leave `border = nil` to inherit `vim.o.winborder`.
 - **Search feels different**: `/` and `?` are in `native_types` by default and rendered at the bottom; remove them from that list to also center them.
+- **Pending keys not shown** (e.g. `d3`, `c3`, `y3`): either move it to statusline with `vim.o.showcmdloc = "statusline"`, or just show cmdline at the bottom. If you do choose statusline just remember to put the `%S` item into your statusline configuration.
+- **Macro recording indicator not shown** (`recording @a`): either add the `vim.fn.reg_recording()` in your statusline configuration, or just show cmdline at the bottom.
